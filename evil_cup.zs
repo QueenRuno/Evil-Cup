@@ -121,7 +121,7 @@ class HDFalseGrail:HDWeapon{
 					A_TakeOffFirst(blockinv.gettag(),2);
 					A_Refire("nope");
 				}else if(pitch>-25){
-					A_MuzzleClimb(0,-8);
+					A_MuzzleClimb(0,-8,wepdot:false);
 					A_Refire();
 				}else{
 					A_Refire("inject");
@@ -131,14 +131,14 @@ class HDFalseGrail:HDWeapon{
 		goto nope;
 	inject:
 		TNT1 A 7{
-			A_MuzzleClimb(0,-2);
+			A_MuzzleClimb(0,-2,wepdot:false);
 			if(invoker.weaponstatus[HDSP_AMOUNT]>0){
 				invoker.weaponstatus[HDSP_AMOUNT]--;
 				A_StartSound("potion/chug",CHAN_VOICE);
 				HDF.Give(self,"SatanicPact",6);
 			}
 		}
-		TNT1 AAAAA 1 A_MuzzleClimb(0,0.1);
+		TNT1 AAAAA 1 A_MuzzleClimb(0,0.1,wepdot:false);
 		TNT1 A 5 A_JumpIf(!pressingfire(),"injectend");
 		goto hold;
 	injectend:
