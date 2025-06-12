@@ -83,7 +83,7 @@ class HDFalseGrail:HDWeapon{
 	states{
 	select:
 		TNT1 A 0{
-			if(DoHelpText())A_WeaponMessage(Stringtable.Localize("$POTION_TEXT1"));
+			if(DoHelpText())A_WeaponMessage(Stringtable.Localize("\ci::: \ckEvil Cup \ci:::\c-\n\n\nMade by\ndesperate human hands.\n\nIn Vain."));
 			A_StartSound("potion/swish",8,CHANF_OVERLAP);
 		}
 		goto super::select;
