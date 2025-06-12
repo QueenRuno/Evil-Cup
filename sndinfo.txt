@@ -1,0 +1,1 @@
+bauble/away	"trvecvp.mp3"	$pitchset bauble/away 0.2
