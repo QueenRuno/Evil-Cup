@@ -240,7 +240,7 @@ class SatanicPact:HDDrug{
 				amount--;
 			}
 
-				if(hdp.beatcounter%40==0){
+				if(hdp.beatcounter%80==0){
 			//time wounds all the heals as we faaadee out of vieeew
 		let hdbw=hdbleedingwound.findbiggest(hdp,HDBW_FINDPATCHED|HDBW_FINDhealing);
 		if(hdbw){	
@@ -256,7 +256,7 @@ class SatanicPact:HDDrug{
 		}
 			
 			if(
-				hdp.beatcounter%181==0
+				hdp.beatcounter%281==0
 			){
 				hdp.A_Log(Stringtable.Localize("Sinner..."),true);
 				amount-=40;
