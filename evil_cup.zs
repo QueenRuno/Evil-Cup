@@ -240,7 +240,7 @@ class SatanicPact:HDDrug{
 				amount--;
 			}
 
-				if(hdp.beatcounter%80==0){
+				if(hdp.beatcounter%30==0){
 			//time wounds all the heals as we faaadee out of vieeew
 		let hdbw=hdbleedingwound.findbiggest(hdp,HDBW_FINDPATCHED|HDBW_FINDhealing);
 		if(hdbw){	
@@ -256,12 +256,12 @@ class SatanicPact:HDDrug{
 		}
 			
 			if(
-				hdp.beatcounter%281==0
+				hdp.beatcounter%65==0
 			){
 				hdp.A_Log(Stringtable.Localize("Sinner..."),true);
-				amount-=40;
+				amount-=21;
 				hdp.incaptimer=min(0,hdp.incaptimer);
-				hdp.stunned=9;
+				hdp.stunned=19;
 				plantbit.spawnplants(hdp,33,144);
 				switch(random(0,3)){
 				case 0:
@@ -280,8 +280,8 @@ class SatanicPact:HDDrug{
 					break;
 				case 1:
 					{
-					hdp.aggravateddamage+=20;
-					hdp.burncount+=20;
+					hdp.aggravateddamage+=40;
+					hdp.burncount+=40;
 					for(int i=0;i<2;i++){
 						let bld=hdbleedingwound.findbiggest(hdp,HDBW_FINDPATCHED|HDBW_FINDhealing);
 						if(bld)bld.destroy();
@@ -294,7 +294,7 @@ class SatanicPact:HDDrug{
 					break;
 				default:
 					hdp.aggravateddamage+=20;
-					hdp.burncount+=20;
+					hdp.burncount+=40;
 					for(int i=0;i<2;i++){
 						let bld=hdbleedingwound.findbiggest(hdp,HDBW_FINDPATCHED|HDBW_FINDhealing);
 						if(bld)bld.destroy();
